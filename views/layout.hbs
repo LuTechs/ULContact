@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100,100italic,400italic,500italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../asset/thirdparty/material.min.css">
+    <link rel="stylesheet" href="../asset/view.css">
+    <link rel="stylesheet" href="../asset/pagination.css">
+</head>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">ULContact App</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="index">Contact</a>
+                <a class="mdl-navigation__link" href="/logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="mdl-layout__content">
+        <div class="page-content" id="root">
+            {{{body}}}
+        </div>
+    </main>
+</div>
+<script defer src="../asset/thirdparty/material.min.js"></script>
+{{{_sections.script}}}
+</body>
+</html>

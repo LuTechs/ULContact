@@ -1,0 +1,46 @@
+<div class="mdl-layout mdl-layout-login mdl-lay mdl-js-layout mdl-color--grey-100">
+    <main class="mdl-layout__content">
+        <div class="login-card-wide mdl-card mdl-shadow--6dp">
+            <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+                <h2 class="mdl-card__title-text">Marketing App Register</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <form action="/auth/register" method="post" id="frmRegister" onkeypress="keyEnterLogin(event)" >
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width {{#if errorMsg.isInvalidEmail}}is-invalid{{/if}}">
+                        <input class="mdl-textfield__input is-invalid" type="text" name="email" value="{{data.email}}"/>
+                        <label class="mdl-textfield__label" for="sample3">Email</label>
+                        <span class="mdl-textfield__error">{{errorMsg.email}}</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width {{#if errorMsg.isInvalidPassword}}is-invalid{{/if}}">
+                        <input class="mdl-textfield__input" type="password" name="password" autocomplete="off"/>
+                        <label class="mdl-textfield__label" >Password</label>
+                        <span class="mdl-textfield__error">{{errorMsg.password}}</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
+                        <input class="mdl-textfield__input" type="password" name="confirmPassword"  />
+                        <label class="mdl-textfield__label" >Confirm Password</label>
+                    </div>
+                </form>
+            </div>
+            <div class="mdl-card__actions mdl-card--border text-center">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent full-width-btn"
+                        onclick="btnRegister()">
+                    Register
+                </button>
+            </div>
+        </div>
+    </main>
+</div>
+{{#sections 'script'}}
+<script type="application/javascript">
+    function btnRegister() {
+        document.querySelector('#frmRegister').submit()
+    }
+    function keyEnterLogin(event) {
+        if(event.keyCode==13){
+            document.querySelector('#frmRegister').submit();
+        }
+    }
+
+  </script>
+{{/sections}}

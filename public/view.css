@@ -1,0 +1,25 @@
+.full-width {
+    width: 98%;
+}
+
+/*Login*/
+.mdl-layout-login {
+    align-items: center;
+    justify-content: center;
+}
+.mdl-layout__content {
+    padding: 24px;
+    flex: none;
+}
+.login-card-wide.mdl-card {
+  width: 450px;
+}
+
+.full-width-btn{
+  margin:auto;
+  width:100%;
+}
+
+.error-text{
+  color: red;
+}

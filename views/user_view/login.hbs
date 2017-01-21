@@ -1,0 +1,57 @@
+<div class="mdl-layout mdl-layout-login mdl-lay mdl-js-layout mdl-color--grey-100">
+    <main class="mdl-layout__content">
+        <div class="login-card-wide mdl-card mdl-shadow--6dp">
+            <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+                <h2 class="mdl-card__title-text">ULContact App Login</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <form action="/auth/login" method="post" id="frmLogin" onkeypress="keyEnterLogin(event)">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo full-width">
+                        <input class="mdl-textfield__input" type="text" name="email" value="{{email}}"/>
+                        <label class="mdl-textfield__label" >Email</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo full-width">
+                        <input class="mdl-textfield__input" type="password" name="password" />
+                        <label class="mdl-textfield__label" >Password</label>
+                    </div>
+                </form>
+                <p class="error-text">{{errorMsg}}</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border text-center">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent full-width-btn" onclick="btnLogin()">
+                    Login
+                </button>
+
+              <div class="mdl-grid">
+
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet ">
+                    <button class="mdl-button mdl-js-button mdl-button--primary" onclick="btnSignUp()">
+                        Register
+                    </button>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                    <button class="mdl-button mdl-js-button mdl-button--primary">
+                        Forgot Password
+                    </button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+{{#sections 'script'}}
+    <script type="application/javascript">
+        function btnLogin() {
+            document.querySelector('#frmLogin').submit();
+        }
+        function btnSignUp() {
+            window.location.href="../auth/register";
+        }
+        function keyEnterLogin(event) {
+            if(event.keyCode==13){
+                document.querySelector('#frmLogin').submit();
+            }
+        }
+    </script>
+{{/sections}}

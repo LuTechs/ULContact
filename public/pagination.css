@@ -1,0 +1,70 @@
+/**
+ * Pagination
+ */
+.space-span span{
+  margin-left:15px;
+}
+.mka-paging {
+  color: rgba(0, 0, 0, 0.54);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 56px;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.mka-paging > * {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.mka-list + .mka-paging {
+  margin: 0;
+}
+
+.mka-paging__per-page {
+  position: relative;
+}
+
+.mka-paging__per-page-label {
+  margin-right: 40px;
+}
+
+.mka-paging__per-page-value {
+  position: absolute;
+  right: 36px;
+  top: 6px;
+}
+
+.mka-paging__per-page + .mka-paging__count {
+  margin-left: 24px;
+}
+
+.mka-paging .mka-menu {
+  min-width: 64px;
+}
+
+.mka-paging__prev:last-child {
+  margin-right: 44px;
+}
+
+.mka-paging__count + .mka-paging__prev {
+  margin-left: 24px;
+}
+
+.mka-paging__prev + .mka-paging__next {
+  margin-left: 12px;
+}
+
+.mka-paging__count + .mka-paging__next {
+  margin-left: 68px;
+}
