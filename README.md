@@ -1,6 +1,5 @@
-
-![UlContact login](![](https://raw.github.com/ungleng/ULContact/master/screenshots/login.png))
-![UlContact main](![](https://raw.github.com/ungleng/ULContact/master/screenshots/main.png))
+![](https://raw.githubusercontent.com/ungleng/ULContact/master/screenshots/login.png)
+![](https://raw.githubusercontent.com/ungleng/ULContact/master/screenshots/main.png)
 
 **ULContact is an open-source contact management app built on the modern web with  [React](https://facebook.github.io/react/), and [Redux](https://github.com/reactjs/redux).**
 
